@@ -10,7 +10,7 @@
         <!--Dominant View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Dominant View Controller" customClass="ViewController" customModule="EmoTConGee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Dominant View Controller" customClass="EmoViewController" customModule="EmoTConGee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,16 +19,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="HnJ-iG-b72" userLabel="Triple-threat Stack">
-                                        <rect key="frame" x="0.0" y="-10" width="414" height="808"/>
+                                        <rect key="frame" x="0.0" y="-30" width="414" height="828"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ri-Qc-Ys1">
-                                                <rect key="frame" x="153" y="0.0" width="108" height="588"/>
+                                                <rect key="frame" x="153" y="0.0" width="108" height="608"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How do everyone feel about..blablabla ?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-l5-KdR">
-                                                <rect key="frame" x="0.0" y="643" width="414" height="60"/>
+                                                <rect key="frame" x="0.0" y="663" width="414" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="c44-2l-65q"/>
                                                 </constraints>
@@ -36,7 +36,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rns-5E-7fb">
-                                                <rect key="frame" x="145.5" y="758" width="123" height="50"/>
+                                                <rect key="frame" x="145.5" y="778" width="123" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="V0S-uJ-yud"/>
                                                 </constraints>
@@ -53,7 +53,7 @@
                                 <color key="backgroundColor" red="0.81960784310000001" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="HnJ-iG-b72" secondAttribute="trailing" id="h1m-iL-VPV"/>
-                                    <constraint firstItem="HnJ-iG-b72" firstAttribute="top" secondItem="jHf-7l-g6U" secondAttribute="top" constant="-10" id="tPi-0o-vuX"/>
+                                    <constraint firstItem="HnJ-iG-b72" firstAttribute="top" secondItem="jHf-7l-g6U" secondAttribute="top" constant="-30" id="tPi-0o-vuX"/>
                                     <constraint firstItem="HnJ-iG-b72" firstAttribute="leading" secondItem="jHf-7l-g6U" secondAttribute="leading" id="tUE-Gk-J0k"/>
                                     <constraint firstAttribute="bottom" secondItem="HnJ-iG-b72" secondAttribute="bottom" constant="20" id="xTn-ss-4EH"/>
                                 </constraints>

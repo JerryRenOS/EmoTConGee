@@ -4,7 +4,7 @@
 
 
 import UIKit
-import SwiftyiOS
+import SwifteriOS
 import CoreML
 // import SwiftyJSON  //comment this out to run if necessary
 

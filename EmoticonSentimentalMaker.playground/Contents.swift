@@ -32,3 +32,4 @@ try sentimentClassifier.prediction(from: "@Netflix is an average company~")
 try sentimentClassifier.prediction(from: "Justin Bieber sucks!")
 
 try sentimentClassifier.prediction(from: "Sunsets are beautiful!")
+ 

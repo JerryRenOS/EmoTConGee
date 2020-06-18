@@ -125,9 +125,9 @@
 		8F4FC41D228DB59800100CE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8F4FC425228DB59800100CE4 /* SwifterDemoiOS.app */,
 				8F4FC427228DB59800100CE4 /* SwifteriOS.framework */,
 				8F4FC429228DB59800100CE4 /* SwifterMac.framework */,
+				8F4FC425228DB59800100CE4 /* SwifterDemoiOS.app */,
 				8F4FC42B228DB59800100CE4 /* SwifterDemoMac.app */,
 				8F4FC42D228DB59800100CE4 /* SwifterTests.xctest */,
 			);
