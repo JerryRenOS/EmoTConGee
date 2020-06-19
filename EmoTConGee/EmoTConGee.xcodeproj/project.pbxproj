@@ -116,6 +116,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F6D3BA5249C405B00772DCA /* ViewControls */ = {
+			isa = PBXGroup;
+			children = (
+				8F9C99CE249AEB1800E862A7 /* EmoViewController.swift */,
+			);
+			path = ViewControls;
+			sourceTree = "<group>";
+		};
+		8F6D3BAB249C407000772DCA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F6D3B99249C243B00772DCA /* GloballyUsed.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8F6D3BAC249C407C00772DCA /* DefaultDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				8F9C99CC249AEB1800E862A7 /* SceneDelegate.swift */,
+				8F9C99CA249AEB1800E862A7 /* AppDelegate.swift */,
+			);
+			path = DefaultDelegates;
+			sourceTree = "<group>";
+		};
 		8F9C99BE249AEB1800E862A7 = {
 			isa = PBXGroup;
 			children = (
@@ -137,10 +162,9 @@
 		8F9C99C9249AEB1800E862A7 /* EmoTConGee */ = {
 			isa = PBXGroup;
 			children = (
-				8F9C99CA249AEB1800E862A7 /* AppDelegate.swift */,
-				8F9C99CC249AEB1800E862A7 /* SceneDelegate.swift */,
-				8F9C99CE249AEB1800E862A7 /* EmoViewController.swift */,
-				8F6D3B99249C243B00772DCA /* GloballyUsed.swift */,
+				8F6D3BAC249C407C00772DCA /* DefaultDelegates */,
+				8F6D3BA5249C405B00772DCA /* ViewControls */,
+				8F6D3BAB249C407000772DCA /* Models */,
 				8F9C99D0249AEB1800E862A7 /* Main.storyboard */,
 				8F6D3B75249C0C1400772DCA /* EmoTConGeeTweetoClassifier.mlmodel */,
 				8F9C99D3249AEB1C00E862A7 /* Assets.xcassets */,
