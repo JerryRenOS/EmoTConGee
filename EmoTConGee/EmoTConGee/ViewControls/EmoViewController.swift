@@ -15,11 +15,11 @@ class EmoViewController: UIViewController {
 
     let swifterAuthenticated = Swifter(consumerKey: GloballyUsed.tweetoDevConsumerKey, consumerSecret: GloballyUsed.tweetoDevConsumerSecret)
     
-    let toBeSearched = "@McDonalds"
+    let toBeSearched = "中国"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        swifterAuthenticated.searchTweet(using: toBeSearched, success: { (results, metaData) in
+        swifterAuthenticated.searchTweet(using: toBeSearched, lang: "zh", count: 101, tweetMode: .extended, success: { (results, metaData) in
             print(results)
             print("--------------separator------------------")
             print("Metadata: \(metaData)")
@@ -29,4 +29,6 @@ class EmoViewController: UIViewController {
         }
     }
 }
+
+
 
