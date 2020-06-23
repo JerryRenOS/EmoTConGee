@@ -12,6 +12,5 @@ struct GloballyUsed {
     
     static let tweetoDevConsumerKey = "w7xZoWaXcWdTmM2AgC8KipKC0"
     static let tweetoDevConsumerSecret = "54xea5d0aqbq2uo4RJnCt3INFsIVXBERhpEoUOg88e9hYbOUlE"
-    
 }    
                  
