@@ -134,6 +134,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8FBE62E024A3F9ED009E3F87 /* ViewControls */ = {
+			isa = PBXGroup;
+			children = (
+				AD9EC65120FE2EF4002AE9BF /* ViewController.swift */,
+			);
+			path = ViewControls;
+			sourceTree = "<group>";
+		};
 		AD9EC64320FE2EF4002AE9BF = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +166,7 @@
 			children = (
 				8F4FC41A228DB56E00100CE4 /* EmotiConjiTweetoClassifier.mlmodel */,
 				AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */,
-				AD9EC65120FE2EF4002AE9BF /* ViewController.swift */,
+				8FBE62E024A3F9ED009E3F87 /* ViewControls */,
 				AD9EC65320FE2EF4002AE9BF /* Main.storyboard */,
 				AD9EC65620FE2EF7002AE9BF /* Assets.xcassets */,
 				AD9EC65820FE2EF7002AE9BF /* LaunchScreen.storyboard */,

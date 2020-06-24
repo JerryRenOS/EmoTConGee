@@ -19,23 +19,70 @@ class EmoViewController: UIViewController {
 
     let swifterAuthenticated = Swifter(consumerKey: GloballyUsed.tweetoDevConsumerKey, consumerSecret: GloballyUsed.tweetoDevConsumerSecret)
     
-    let toBeSearched = "中国"
+    let toBeSearched = "blessed"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emoTiClassfierTestRun()
-        swifterAuthenticated.searchTweet(using: toBeSearched, lang: "zh", count: 101, tweetMode: .extended, success: { (results, metaData) in
-            print(results)
-            print("--------------separator------------------")
-            print("Metadata: \(metaData)")
+     //   emoTiClassfierTestRun()
+        self.tweetsOperations()
+    }
+    
+    fileprivate func tweetsOperations() {
+        
+        swifterAuthenticated.searchTweet(using: toBeSearched, lang: "en", count: 101, tweetMode: .extended, success: { (results, metaData) in
+
+            var tweetsCollectionForAnalysis: Array<EmoTConGeeTweetoClassifierInput> = [EmoTConGeeTweetoClassifierInput]() // intentionally repetitious
+            
+            
+            var tweetsCollectionPlain: Array<String> = []
+            // this one for future use (regular parse)
+            
+            for ind in 0..<100 {
+                guard let tweetText = results[ind]["full_text"].string else { return }
+                
+                let tweetTextInputForClassification = EmoTConGeeTweetoClassifierInput(text: tweetText)
+                
+                tweetsCollectionForAnalysis.append(tweetTextInputForClassification)
+                
+                tweetsCollectionPlain.append(tweetText)
+                
+            }
+            do {
+             let emoPredictions = try self.emoTiClassiferObject.predictions(inputs: tweetsCollectionForAnalysis)
+
+                var valenceScore = 0
+                
+                for emoPredic in emoPredictions {
+
+                    let emoValence = emoPredic.label
+                    
+                    if emoValence == "Neutral" {
+                        valenceScore += 0 // awaits adjustment
+                    }
+                    if emoValence == "Pos" {
+                        valenceScore += 1
+                    }
+                    
+                    if emoValence == "Neg" {
+                        valenceScore -= 1
+                    }
+                    print(emoValence)
+                }
+                print(valenceScore)
+   
+            } catch {
+                print("Error making predictions on tweetsCollection. Specifics below: \(error)")
+            }
+            
         }) { (error) in
             print(error.localizedDescription)
         }
     }
+    
     let emoTiClassiferObject = EmoTConGeeTweetoClassifier()
     
     private func emoTiClassfierTestRun() {
-        let predictionText = try? emoTiClassiferObject.prediction(text: "@Netflix is pretty darn terrible!")
+        let predictionText = try? emoTiClassiferObject.prediction(text: "@Netflix is pretty darn amazing!")
         print(predictionText?.label )
         
     }
