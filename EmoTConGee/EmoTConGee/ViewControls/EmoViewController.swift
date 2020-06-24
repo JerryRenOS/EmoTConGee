@@ -7,6 +7,7 @@
 //
 
 import CoreML
+import SwiftyJSON
 import UIKit
 import SwifteriOS
 

@@ -17,6 +17,7 @@
 		8F9C99D2249AEB1800E862A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9C99D0249AEB1800E862A7 /* Main.storyboard */; };
 		8F9C99D4249AEB1C00E862A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9C99D3249AEB1C00E862A7 /* Assets.xcassets */; };
 		8F9C99D7249AEB1C00E862A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9C99D5249AEB1C00E862A7 /* LaunchScreen.storyboard */; };
+		D06E8008E67A381BE24BF564 /* Pods_EmoTConGee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B84A226397BD67ABF916AC /* Pods_EmoTConGee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		13B84A226397BD67ABF916AC /* Pods_EmoTConGee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmoTConGee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26F6A69C65DAEC34848CD056 /* Pods-EmoTConGee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmoTConGee.release.xcconfig"; path = "Target Support Files/Pods-EmoTConGee/Pods-EmoTConGee.release.xcconfig"; sourceTree = "<group>"; };
 		8F6D3B75249C0C1400772DCA /* EmoTConGeeTweetoClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmoTConGeeTweetoClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
 		8F6D3B77249C1E7900772DCA /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = ../Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
 		8F6D3B99249C243B00772DCA /* GloballyUsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloballyUsed.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		8F9C99D3249AEB1C00E862A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F9C99D6249AEB1C00E862A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F9C99D8249AEB1C00E862A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAA167DBE6D0D0600575AC85 /* Pods-EmoTConGee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmoTConGee.debug.xcconfig"; path = "Target Support Files/Pods-EmoTConGee/Pods-EmoTConGee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F6D3B8B249C1F4200772DCA /* SwifteriOS.framework in Frameworks */,
+				D06E8008E67A381BE24BF564 /* Pods_EmoTConGee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 		8F6D3B8A249C1F4200772DCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13B84A226397BD67ABF916AC /* Pods_EmoTConGee.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				8F9C99C9249AEB1800E862A7 /* EmoTConGee */,
 				8F9C99C8249AEB1800E862A7 /* Products */,
 				8F6D3B8A249C1F4200772DCA /* Frameworks */,
+				996291FD7E6EF5CB0E915981 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +181,16 @@
 			path = EmoTConGee;
 			sourceTree = "<group>";
 		};
+		996291FD7E6EF5CB0E915981 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAA167DBE6D0D0600575AC85 /* Pods-EmoTConGee.debug.xcconfig */,
+				26F6A69C65DAEC34848CD056 /* Pods-EmoTConGee.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,10 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F9C99DB249AEB1C00E862A7 /* Build configuration list for PBXNativeTarget "EmoTConGee" */;
 			buildPhases = (
+				383289920DBA50BB7E444809 /* [CP] Check Pods Manifest.lock */,
 				8F9C99C3249AEB1800E862A7 /* Sources */,
 				8F9C99C4249AEB1800E862A7 /* Frameworks */,
 				8F9C99C5249AEB1800E862A7 /* Resources */,
 				8F6D3B8D249C1F4300772DCA /* Embed Frameworks */,
+				C90F7CF89CD0BEEDD1379BBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +303,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		383289920DBA50BB7E444809 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmoTConGee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C90F7CF89CD0BEEDD1379BBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmoTConGee/Pods-EmoTConGee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmoTConGee/Pods-EmoTConGee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EmoTConGee/Pods-EmoTConGee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F9C99C3249AEB1800E862A7 /* Sources */ = {
@@ -436,6 +497,7 @@
 		};
 		8F9C99DC249AEB1C00E862A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAA167DBE6D0D0600575AC85 /* Pods-EmoTConGee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +516,7 @@
 		};
 		8F9C99DD249AEB1C00E862A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F6A69C65DAEC34848CD056 /* Pods-EmoTConGee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
