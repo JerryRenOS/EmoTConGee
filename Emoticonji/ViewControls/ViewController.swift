@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let prediction = try! emoticonClassyfy.prediction(text: "Sarah Lawence kids are uniquely weird")
+        let prediction = try! emoticonClassyfy.prediction(text: "Sunshine on my face!")
         // same as playground -
       
       //  print(prediction.label)  // also, exclamation mark makes it more accurate

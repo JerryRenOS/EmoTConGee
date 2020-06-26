@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F04262324A6604A00030451 /* Omos For Experimentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F04262224A6604A00030451 /* Omos For Experimentation.swift */; };
 		8F0C48F924A53BAE001D28F2 /* OmosCmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C48F824A53BAE001D28F2 /* OmosCmViewController.swift */; };
 		8F6D3B76249C0C1400772DCA /* EmoTConGeeTweetoClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D3B75249C0C1400772DCA /* EmoTConGeeTweetoClassifier.mlmodel */; };
 		8F6D3B9A249C243B00772DCA /* GloballyUsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D3B99249C243B00772DCA /* GloballyUsed.swift */; };
@@ -18,6 +19,44 @@
 		8F9C99D7249AEB1C00E862A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9C99D5249AEB1C00E862A7 /* LaunchScreen.storyboard */; };
 		D06E8008E67A381BE24BF564 /* Pods_EmoTConGee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B84A226397BD67ABF916AC /* Pods_EmoTConGee.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F04261724A6602800030451 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F6D3B77249C1E7900772DCA /* SwifterImported.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F50EE1944A5AB00894629;
+			remoteInfo = SwifteriOS;
+		};
+		8F04261924A6602800030451 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F6D3B77249C1E7900772DCA /* SwifterImported.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F51131944A61D00894629;
+			remoteInfo = SwifterMac;
+		};
+		8F04261B24A6602800030451 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F6D3B77249C1E7900772DCA /* SwifterImported.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C1F1944AA1A00993175;
+			remoteInfo = SwifterDemoiOS;
+		};
+		8F04261D24A6602800030451 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F6D3B77249C1E7900772DCA /* SwifterImported.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C471944AECB00993175;
+			remoteInfo = SwifterDemoMac;
+		};
+		8F04261F24A6602800030451 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F6D3B77249C1E7900772DCA /* SwifterImported.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6B4D5751C7BAC4500E06514;
+			remoteInfo = SwifterTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8F6D3B8D249C1F4300772DCA /* Embed Frameworks */ = {
@@ -35,6 +74,7 @@
 /* Begin PBXFileReference section */
 		13B84A226397BD67ABF916AC /* Pods_EmoTConGee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmoTConGee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F6A69C65DAEC34848CD056 /* Pods-EmoTConGee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmoTConGee.release.xcconfig"; path = "Target Support Files/Pods-EmoTConGee/Pods-EmoTConGee.release.xcconfig"; sourceTree = "<group>"; };
+		8F04262224A6604A00030451 /* Omos For Experimentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Omos For Experimentation.swift"; sourceTree = "<group>"; };
 		8F0C48F824A53BAE001D28F2 /* OmosCmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmosCmViewController.swift; sourceTree = "<group>"; };
 		8F6D3B75249C0C1400772DCA /* EmoTConGeeTweetoClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmoTConGeeTweetoClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
 		8F6D3B77249C1E7900772DCA /* SwifterImported.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwifterImported.xcodeproj; path = ../Swifter/SwifterImported.xcodeproj; sourceTree = "<group>"; };
@@ -62,6 +102,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F04261024A6602400030451 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F04261824A6602800030451 /* SwifteriOS.framework */,
+				8F04261A24A6602800030451 /* SwifterMac.framework */,
+				8F04261C24A6602800030451 /* SwifterDemoiOS.app */,
+				8F04261E24A6602800030451 /* SwifterDemoMac.app */,
+				8F04262024A6602800030451 /* SwifterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8F6D3B8A249C1F4200772DCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +127,7 @@
 			children = (
 				8F9C99CE249AEB1800E862A7 /* EmoViewController.swift */,
 				8F0C48F824A53BAE001D28F2 /* OmosCmViewController.swift */,
+				8F04262224A6604A00030451 /* Omos For Experimentation.swift */,
 			);
 			path = ViewControls;
 			sourceTree = "<group>";
@@ -188,12 +241,56 @@
 			mainGroup = 8F9C99BE249AEB1800E862A7;
 			productRefGroup = 8F9C99C8249AEB1800E862A7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8F04261024A6602400030451 /* Products */;
+					ProjectRef = 8F6D3B77249C1E7900772DCA /* SwifterImported.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8F9C99C6249AEB1800E862A7 /* EmoTConGee */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8F04261824A6602800030451 /* SwifteriOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifteriOS.framework;
+			remoteRef = 8F04261724A6602800030451 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8F04261A24A6602800030451 /* SwifterMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifterMac.framework;
+			remoteRef = 8F04261924A6602800030451 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8F04261C24A6602800030451 /* SwifterDemoiOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoiOS.app;
+			remoteRef = 8F04261B24A6602800030451 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8F04261E24A6602800030451 /* SwifterDemoMac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoMac.app;
+			remoteRef = 8F04261D24A6602800030451 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8F04262024A6602800030451 /* SwifterTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifterTests.xctest;
+			remoteRef = 8F04261F24A6602800030451 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8F9C99C5249AEB1800E862A7 /* Resources */ = {
@@ -261,6 +358,7 @@
 				8F9C99CB249AEB1800E862A7 /* AppDelegate.swift in Sources */,
 				8F9C99CD249AEB1800E862A7 /* SceneDelegate.swift in Sources */,
 				8F0C48F924A53BAE001D28F2 /* OmosCmViewController.swift in Sources */,
+				8F04262324A6604A00030451 /* Omos For Experimentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
