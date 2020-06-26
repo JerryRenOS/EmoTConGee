@@ -19,7 +19,7 @@ class EmoViewController: UIViewController {
 
     let swifterAuthenticated = Swifter(consumerKey: GloballyUsed.tweetoDevConsumerKey, consumerSecret: GloballyUsed.tweetoDevConsumerSecret)
     
-    let toBeSearched = "blessed"
+    let toBeSearched = "Hulu"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,9 @@ class EmoViewController: UIViewController {
             var tweetsCollectionPlain: Array<String> = []
             // this one for future use (regular parse)
             
-            for ind in 0..<100 {
+            print(results[1]["user"]["friends_count"])
+            
+            for ind in 0..<2 {
                 guard let tweetText = results[ind]["full_text"].string else { return }
                 
                 let tweetTextInputForClassification = EmoTConGeeTweetoClassifierInput(text: tweetText)
@@ -45,6 +47,8 @@ class EmoViewController: UIViewController {
                 tweetsCollectionForAnalysis.append(tweetTextInputForClassification)
                 
                 tweetsCollectionPlain.append(tweetText)
+                
+           //     print(tweetText)
                 
             }
             do {
@@ -62,13 +66,12 @@ class EmoViewController: UIViewController {
                     if emoValence == "Pos" {
                         valenceScore += 1
                     }
-                    
                     if emoValence == "Neg" {
                         valenceScore -= 1
                     }
-                    print(emoValence)
+                //    print(emoValence)
                 }
-                print(valenceScore)
+            //    print(valenceScore)
    
             } catch {
                 print("Error making predictions on tweetsCollection. Specifics below: \(error)")
