@@ -13,8 +13,10 @@ import SwifteriOS
 
 // not only emo, but scores & maybe animations to make it lovely
 // (bouncing, spining, shifting in n' out )
-// ranking tables of for instance netflix vs hulu vs amazing prime
+// ranking tables of for instance netflix vs hulu vs amazon prime
 // or other omos comparatives
+// starbucks vs mcdonalds vs subway vs kfc vs chipotle vs taco bell
+// combine 3d sceneKit into this? Aha
 
 class EmoViewController: UIViewController {
 
@@ -44,7 +46,7 @@ class EmoViewController: UIViewController {
             var tweetsCollectionPlain: Array<String> = []
             // this one for future use (regular parse)
             
-            print(results[0]["user"]["friends_count"])
+            print(results[0]["full_text"])
             
             for ind in 0..<100 {
                 guard let tweetText = results[ind]["full_text"].string else { return }

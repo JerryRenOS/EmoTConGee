@@ -126,8 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				8F9C99CE249AEB1800E862A7 /* EmoViewController.swift */,
-				8F0C48F824A53BAE001D28F2 /* OmosCmViewController.swift */,
 				8F04262224A6604A00030451 /* Omos For Experimentation.swift */,
+				8F0C48F824A53BAE001D28F2 /* OmosCmViewController.swift */,
 			);
 			path = ViewControls;
 			sourceTree = "<group>";

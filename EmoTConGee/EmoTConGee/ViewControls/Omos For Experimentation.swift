@@ -23,7 +23,7 @@ class OmosComparatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tweetsHandledRightHere(using: "#blessed")
+   //     tweetsHandledRightHere(using: "#blessed")
         omosCmTableView.dataSource = self
         omosCmTableView.delegate = self
     }
@@ -31,65 +31,65 @@ class OmosComparatViewController: UIViewController {
     let emoTiClassiferObject = EmoTConGeeTweetoClassifier()
     
     
+//    private func tweetsHandledRightHere(using keyword: String) -> Int {
+//
+//        var cmScore = 0
+//
+//        SwifterOmosCm.searchTweet(using: keyword, lang: "en", count: 111, tweetMode: TweetMode.extended, success: { (results, metaData) in
+//
+//            print(results[1]["full_text"])
+//
+//            var tweetsCollectionForAnalysis: Array<EmoTConGeeTweetoClassifierInput> = [EmoTConGeeTweetoClassifierInput]()
+//
+//            for ind in 0..<43 {
+//                guard let tweetText = results[ind]["full_text"].string else { return }
+//
+//                let tweetTextInputForClassification = EmoTConGeeTweetoClassifierInput(text: tweetText)
+//
+//                tweetsCollectionForAnalysis.append(tweetTextInputForClassification)
+//
+//            }
+//            var valenceScore = 0
+//
+//            let emoPredict = try! self.emoTiClassiferObject.predictions(inputs: tweetsCollectionForAnalysis)
+//
+//            do {
+//                let emoPredictions = try self.emoTiClassiferObject.predictions(inputs: tweetsCollectionForAnalysis)
+//
+//                for emoPredic in emoPredictions {
+//
+//                    let emoValence = emoPredic.label
+//
+//                    if emoValence == "Neg" {
+//                        valenceScore -= 1
+//                    }
+//                    if emoValence == "Pos" {
+//                        valenceScore += 1
+//                    }
+//                }
+//                print(valenceScore)
+//                cmScore = valenceScore
+//
+//                cmmmScore = valenceScore
+//
+//                print("first cmScore is \(cmmmScore)")
+//
+//            } catch {
+//                print("Error making predictions on tweetsCollection. Specifics below: \(error)")
+//            }
+//            print("second cmScore is \(cmmmScore)")
+//        })
+//
+//        { (error) in
+//            print(error)
+//            print("shorter version of the error below:")
+//            print(error.localizedDescription)
+//            print("third cmScore is \(cmmmScore)")
+//        }
+//        print("zeroth cmScore is \(cmmmScore)")
+//        return cmmmScore
+//    }
     
-    private func tweetsHandledRightHere(using keyword: String) -> Int {
-        
-        var cmScore = 0
-        
-        SwifterOmosCm.searchTweet(using: keyword, lang: "en", count: 111, tweetMode: TweetMode.extended, success: { (results, metaData) in
-            
-            print(results[1]["full_text"])
-            
-            var tweetsCollectionForAnalysis: Array<EmoTConGeeTweetoClassifierInput> = [EmoTConGeeTweetoClassifierInput]()
-            
-            for ind in 0..<43 {
-                guard let tweetText = results[ind]["full_text"].string else { return }
-                
-                let tweetTextInputForClassification = EmoTConGeeTweetoClassifierInput(text: tweetText)
-                
-                tweetsCollectionForAnalysis.append(tweetTextInputForClassification)
-      
-            }
-            var valenceScore = 0
-            
-            let emoPredict = try! self.emoTiClassiferObject.predictions(inputs: tweetsCollectionForAnalysis)
-            
-            do {
-                let emoPredictions = try self.emoTiClassiferObject.predictions(inputs: tweetsCollectionForAnalysis)
-
-                for emoPredic in emoPredictions {
-                    
-                    let emoValence = emoPredic.label
-                    
-                    if emoValence == "Neg" {
-                        valenceScore -= 1
-                    }
-                    if emoValence == "Pos" {
-                        valenceScore += 1
-                    }
-                }
-                print(valenceScore)
-                cmScore = valenceScore
-                
-                cmmmScore = valenceScore
-                
-                print("first cmScore is \(cmmmScore)")
-                
-            } catch {
-                print("Error making predictions on tweetsCollection. Specifics below: \(error)")
-            }
-            print("second cmScore is \(cmmmScore)")
-        })
-            
-        { (error) in
-            print(error)
-            print("shorter version of the error below:")
-            print(error.localizedDescription)
-            print("third cmScore is \(cmmmScore)")
-        }
-        print("zeroth cmScore is \(cmmmScore)")
-        return cmmmScore
-    }
 }
 
 extension OmosComparatViewController: UITableViewDelegate, UITableViewDataSource {
@@ -97,16 +97,89 @@ extension OmosComparatViewController: UITableViewDelegate, UITableViewDataSource
         return 3
     }
     
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        
+//        let cello = omosCmTableView.dequeueReusableCell(withIdentifier: GloballyUsed.omosCmCelloID, for: indexPath)
+//        
+//        let compTarget: String = "#blessed"
+//        let compScore = tweetsHandledRightHere(using: compTarget) ?? 33
+//
+//        cello.textLabel?.text = compTarget
+//        cello.detailTextLabel?.text = "\(compScore)"
+//                
+//        return cello
+//    }
+    
+    // MARK: - separa
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 203
+    }
+    
+        // MARK: - redo
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cello = omosCmTableView.dequeueReusableCell(withIdentifier: GloballyUsed.omosCmCelloID, for: indexPath)
         
-        let compTarget: String = "#blessed"
-        let compScore = tweetsHandledRightHere(using: compTarget) ?? 33
+        var cmScore = 0
+          
+          SwifterOmosCm.searchTweet(using: "Africa", lang: "en", count: 111, tweetMode: TweetMode.extended, success: { (results, metaData) in
+              
+              print(results[1]["full_text"])
+              
+              var tweetsCollectionForAnalysis: Array<EmoTConGeeTweetoClassifierInput> = [EmoTConGeeTweetoClassifierInput]()
+              
+              for ind in 0..<100 {
+                  guard let tweetText = results[ind]["full_text"].string else { return }
+                  
+                  let tweetTextInputForClassification = EmoTConGeeTweetoClassifierInput(text: tweetText)
+                  
+                  tweetsCollectionForAnalysis.append(tweetTextInputForClassification)
+        
+              }
+              var valenceScore = 0
+              
+              let emoPredict = try! self.emoTiClassiferObject.predictions(inputs: tweetsCollectionForAnalysis)
+              
+              do {
+                  let emoPredictions = try self.emoTiClassiferObject.predictions(inputs: tweetsCollectionForAnalysis)
 
-        cello.textLabel?.text = compTarget
-        cello.detailTextLabel?.text = "\(compScore)"
+                  for emoPredic in emoPredictions {
+                      
+                      let emoValence = emoPredic.label
+                      
+                      if emoValence == "Neg" {
+                          valenceScore -= 1
+                      }
+                      if emoValence == "Pos" {
+                          valenceScore += 1
+                      }
+                  }
+                  print(valenceScore)
+                  cmScore = valenceScore
+                  
+                cello.textLabel?.text = "\(valenceScore)"
                 
+                  cmmmScore = valenceScore
+                  
+                  print("first cmScore is \(cmmmScore)")
+                  
+              } catch {
+                  print("Error making predictions on tweetsCollection. Specifics below: \(error)")
+              }
+              print("second cmScore is \(cmmmScore)")
+          })
+              
+          { (error) in
+              print(error)
+              print("shorter version of the error below:")
+              print(error.localizedDescription)
+              print("third cmScore is \(cmmmScore)")
+          }
+        
+        print("zeroth cmScore is \(cmmmScore)")
+
         return cello
     }
 }
