@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3HC-SP-IF0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="khT-de-RMA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,19 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHf-7l-g6U" userLabel="background view">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="HnJ-iG-b72" userLabel="Triple-threat Stack">
-                                        <rect key="frame" x="0.0" y="-30" width="414" height="828"/>
+                                        <rect key="frame" x="0.0" y="-30" width="414" height="749"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 🌕" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ri-Qc-Ys1">
-                                                <rect key="frame" x="142.5" y="0.0" width="129" height="608"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ri-Qc-Ys1">
+                                                <rect key="frame" x="153" y="0.0" width="108" height="529"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How do everyone feel about..blablabla ?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-l5-KdR">
-                                                <rect key="frame" x="0.0" y="663" width="414" height="60"/>
+                                                <rect key="frame" x="0.0" y="584" width="414" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="c44-2l-65q"/>
                                                 </constraints>
@@ -36,12 +36,16 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rns-5E-7fb">
-                                                <rect key="frame" x="145.5" y="778" width="123" height="50"/>
+                                                <rect key="frame" x="147" y="699" width="120" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="V0S-uJ-yud"/>
+                                                    <constraint firstAttribute="width" constant="120" id="chh-mv-dks"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="Guess 🔝"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                                                <state key="normal" title="Guess">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="guessingGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ikD-wM-Xek"/>
                                                 </connections>
@@ -58,7 +62,7 @@
                                     <constraint firstAttribute="trailing" secondItem="HnJ-iG-b72" secondAttribute="trailing" id="h1m-iL-VPV"/>
                                     <constraint firstItem="HnJ-iG-b72" firstAttribute="top" secondItem="jHf-7l-g6U" secondAttribute="top" constant="-30" id="tPi-0o-vuX"/>
                                     <constraint firstItem="HnJ-iG-b72" firstAttribute="leading" secondItem="jHf-7l-g6U" secondAttribute="leading" id="tUE-Gk-J0k"/>
-                                    <constraint firstAttribute="bottom" secondItem="HnJ-iG-b72" secondAttribute="bottom" constant="20" id="xTn-ss-4EH"/>
+                                    <constraint firstAttribute="bottom" secondItem="HnJ-iG-b72" secondAttribute="bottom" constant="50" id="xTn-ss-4EH"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -71,14 +75,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="CDa-v7-v8Y"/>
+                    <navigationItem key="navigationItem" title="Emo" id="gOc-tQ-aQM"/>
                     <connections>
                         <outlet property="emoLabel" destination="1Ri-Qc-Ys1" id="vRt-io-KfH"/>
                         <outlet property="emoTextfield" destination="jXb-l5-KdR" id="3d8-K9-rDm"/>
+                        <outlet property="guessingButton" destination="rns-5E-7fb" id="JoP-2t-vtI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="67" y="-196"/>
+            <point key="canvasLocation" x="1886.9565217391305" y="-196.20535714285714"/>
         </scene>
         <!--Omos Comparat View Controller-->
         <scene sceneID="f4x-jy-FLL">
@@ -259,6 +266,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntj-Am-Bnx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1071.0144927536232" y="903.34821428571422"/>
+        </scene>
+        <!--Emoji-->
+        <scene sceneID="b3K-B6-KIJ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="khT-de-RMA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Emoji" id="Sfg-Ym-5aG"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bRl-dt-Lh7">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="xKc-ap-u8a"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbq-JS-YXw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.81159420289862" y="-196.20535714285714"/>
         </scene>
     </scenes>
     <resources>

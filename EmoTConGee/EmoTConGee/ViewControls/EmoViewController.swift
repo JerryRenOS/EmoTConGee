@@ -17,30 +17,35 @@ import SwifteriOS
 // or other omos comparatives
 // starbucks vs mcdonalds vs subway vs kfc vs chipotle vs taco bell
 // combine 3d sceneKit into this? Aha
+// search history & favorites as some of the side bar functionalities
 
 class EmoViewController: UIViewController {
-
+    
     let swifterAuthenticated = Swifter(consumerKey: GloballyUsed.tweetoDevConsumerKey, consumerSecret: GloballyUsed.tweetoDevConsumerSecret)
     
     @IBOutlet weak var emoTextfield: UITextField!
     @IBOutlet weak var emoLabel: UILabel!
     
+    @IBOutlet weak var guessingButton: UIButton!
+    
     @IBAction func guessingGame(_ sender: UIButton) {
         
         guard let searchEntryText = emoTextfield.text else { return }
         self.tweetsOperations(with: searchEntryText)
-
-    }
-
+        
+        self.springItUp(sender: sender)
+    }                                    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     //   emoTiClassfierTestRun()  
+        //   emoTiClassfierTestRun()
+        self.curveTheButton()
     }
-
+    
     fileprivate func tweetsOperations(with searchText: String) {
         
         swifterAuthenticated.searchTweet(using: searchText, lang: "en", count: 101, tweetMode: .extended, success: { (results, metaData) in
-
+            
             var tweetsCollectionForAnalysis: Array<EmoTConGeeTweetoClassifierInput> = [EmoTConGeeTweetoClassifierInput]() // intentionally repetitious
             
             var tweetsCollectionPlain: Array<String> = []
@@ -67,37 +72,37 @@ class EmoViewController: UIViewController {
     
     private func doCatchPredict(with tweetsCollectionToBeAnalyzed: [EmoTConGeeTweetoClassifierInput]) {
         
-                 do {
-                  let emoPredictions = try self.emoTiClassiferObject.predictions(inputs: tweetsCollectionToBeAnalyzed)
-
-                     var valenceScore = 0
-                     
-                     for emoPredic in emoPredictions {
-
-                         let emoValence = emoPredic.label
-                         
-                         if emoValence == "Neutral" {
-                             valenceScore += 0 // awaits adjustment
-                         }
-                         if emoValence == "Pos" {
-                             valenceScore += 1
-                         }
-                         if emoValence == "Neg" {
-                             valenceScore -= 1
-                         }
-                     //    print(emoValence)
-                     }
-                     print(valenceScore)
-                    
-                    self.uiRefresher(with: valenceScore)
-        
-                 } catch {
-                     print("Error making predictions on tweetsCollection. Specifics below: \(error)")
-                 }
+        do {
+            let emoPredictions = try self.emoTiClassiferObject.predictions(inputs: tweetsCollectionToBeAnalyzed)
+            
+            var valenceScore = 0
+            
+            for emoPredic in emoPredictions {
+                
+                let emoValence = emoPredic.label
+                
+                if emoValence == "Neutral" {
+                    valenceScore += 0 // awaits adjustment
+                }
+                if emoValence == "Pos" {
+                    valenceScore += 1
+                }
+                if emoValence == "Neg" {
+                    valenceScore -= 1
+                }
+                //    print(emoValence)
+            }
+            print(valenceScore)
+            
+            self.uiRefresher(with: valenceScore)
+            
+        } catch {
+            print("Error making predictions on tweetsCollection. Specifics below: \(error)")
+        }
     }
     
     private func uiRefresher(with viScore: Int) {
-
+        
         if viScore < -12 {
             self.emoLabel.text = "🤕"
         } else if viScore < -4 {
