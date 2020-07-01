@@ -10,6 +10,8 @@
 		8F04262324A6604A00030451 /* Omos For Experimentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F04262224A6604A00030451 /* Omos For Experimentation.swift */; };
 		8F0C48F924A53BAE001D28F2 /* OmosCmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C48F824A53BAE001D28F2 /* OmosCmViewController.swift */; };
 		8F491B2224ABB85E00C0B793 /* GButtonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F491B2124ABB85E00C0B793 /* GButtonPackage.swift */; };
+		8F491B2524AC2DC300C0B793 /* AlertFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F491B2424AC2DC300C0B793 /* AlertFormula.swift */; };
+		8F491B2C24AC333200C0B793 /* EmptinessCheq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F491B2B24AC333200C0B793 /* EmptinessCheq.swift */; };
 		8F6D3B76249C0C1400772DCA /* EmoTConGeeTweetoClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D3B75249C0C1400772DCA /* EmoTConGeeTweetoClassifier.mlmodel */; };
 		8F6D3B9A249C243B00772DCA /* GloballyUsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D3B99249C243B00772DCA /* GloballyUsed.swift */; };
 		8F9C99CB249AEB1800E862A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C99CA249AEB1800E862A7 /* AppDelegate.swift */; };
@@ -78,6 +80,8 @@
 		8F04262224A6604A00030451 /* Omos For Experimentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Omos For Experimentation.swift"; sourceTree = "<group>"; };
 		8F0C48F824A53BAE001D28F2 /* OmosCmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmosCmViewController.swift; sourceTree = "<group>"; };
 		8F491B2124ABB85E00C0B793 /* GButtonPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GButtonPackage.swift; sourceTree = "<group>"; };
+		8F491B2424AC2DC300C0B793 /* AlertFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFormula.swift; sourceTree = "<group>"; };
+		8F491B2B24AC333200C0B793 /* EmptinessCheq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptinessCheq.swift; sourceTree = "<group>"; };
 		8F6D3B75249C0C1400772DCA /* EmoTConGeeTweetoClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmoTConGeeTweetoClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
 		8F6D3B77249C1E7900772DCA /* SwifterImported.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwifterImported.xcodeproj; path = ../Swifter/SwifterImported.xcodeproj; sourceTree = "<group>"; };
 		8F6D3B99249C243B00772DCA /* GloballyUsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloballyUsed.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				8F6D3B99249C243B00772DCA /* GloballyUsed.swift */,
+				8F491B2424AC2DC300C0B793 /* AlertFormula.swift */,
+				8F491B2B24AC333200C0B793 /* EmptinessCheq.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,12 +369,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F491B2524AC2DC300C0B793 /* AlertFormula.swift in Sources */,
 				8F9C99CF249AEB1800E862A7 /* EmoViewController.swift in Sources */,
 				8F491B2224ABB85E00C0B793 /* GButtonPackage.swift in Sources */,
 				8F6D3B9A249C243B00772DCA /* GloballyUsed.swift in Sources */,
 				8F6D3B76249C0C1400772DCA /* EmoTConGeeTweetoClassifier.mlmodel in Sources */,
 				8F9C99CB249AEB1800E862A7 /* AppDelegate.swift in Sources */,
 				8F9C99CD249AEB1800E862A7 /* SceneDelegate.swift in Sources */,
+				8F491B2C24AC333200C0B793 /* EmptinessCheq.swift in Sources */,
 				8F0C48F924A53BAE001D28F2 /* OmosCmViewController.swift in Sources */,
 				8F04262324A6604A00030451 /* Omos For Experimentation.swift in Sources */,
 			);

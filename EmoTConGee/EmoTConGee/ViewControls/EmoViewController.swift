@@ -31,9 +31,14 @@ class EmoViewController: UIViewController {
     @IBAction func guessingGame(_ sender: UIButton) {
         
         guard let searchEntryText = emoTextfield.text else { return }
-        self.tweetsOperations(with: searchEntryText)
         
-        self.springItUp(sender: sender)
+        if searchEntryText.emptinessOrWhiteness() {
+            alertFormula(title: "T", message: "M", action: "let's try again")
+        }
+        else {
+            self.tweetsOperations(with: searchEntryText)
+            self.springItUp(sender: sender)
+        }
     }                                    
     
     override func viewDidLoad() {

@@ -2,7 +2,7 @@
 //  CurveItUp.swift
 //  EmoTConGee
 //
-//  Created by Jerry Ren on 6/30/20.
+//  Created by Jerry Ren on 7/1/20.
 //  Copyright © 2020 Jerry Ren. All rights reserved.
 //
 
