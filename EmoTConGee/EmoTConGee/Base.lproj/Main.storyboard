@@ -75,7 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="CDa-v7-v8Y"/>
+                    <tabBarItem key="tabBarItem" title="MLCeption" id="CDa-v7-v8Y"/>
                     <navigationItem key="navigationItem" title="Emo" id="gOc-tQ-aQM"/>
                     <connections>
                         <outlet property="emoLabel" destination="1Ri-Qc-Ys1" id="vRt-io-KfH"/>
@@ -274,8 +274,10 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Emoji" id="Sfg-Ym-5aG"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bRl-dt-Lh7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.82960261800000001" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="xKc-ap-u8a"/>

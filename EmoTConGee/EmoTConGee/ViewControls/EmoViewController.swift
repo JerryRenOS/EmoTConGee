@@ -33,7 +33,7 @@ class EmoViewController: UIViewController {
         guard let searchEntryText = emoTextfield.text else { return }
         
         if searchEntryText.emptinessOrWhiteness() {
-            alertFormula(title: "T", message: "M", action: "let's try again")
+            alertFormula(title: "You haven't typed anything", message: "", action: "let's try again")
         }
         else {
             self.tweetsOperations(with: searchEntryText)
