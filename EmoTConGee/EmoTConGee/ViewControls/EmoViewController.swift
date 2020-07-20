@@ -86,18 +86,27 @@ class EmoViewController: UIViewController {
                 
                 let emoValence = emoPredic.label
                 
-                if emoValence == "Neutral" {
-                    valenceScore += 0 // awaits adjustment
-                }
-                if emoValence == "Pos" {
+//                if emoValence == "Neutral" {
+//                    valenceScore += 0 // awaits adjustment
+//                }
+//                if emoValence == "Pos" {
+//                    valenceScore += 1
+//                }
+//                if emoValence == "Neg" {
+//                    valenceScore -= 1
+//                }
+                
+                switch emoValence {
+                case "Neutral":
+                    valenceScore += 0
+                case "Pos":
                     valenceScore += 1
-                }
-                if emoValence == "Neg" {
+                case "Neg":
                     valenceScore -= 1
                 }
                 //    print(emoValence)
             }
-            print(valenceScore)
+            // print(valenceScore)
             
             self.uiRefresher(with: valenceScore)
             
