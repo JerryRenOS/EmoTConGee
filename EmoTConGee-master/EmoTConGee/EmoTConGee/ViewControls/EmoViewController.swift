@@ -43,7 +43,7 @@ class EmoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //   emoTiClassfierTestRun()
+           emoTiClassfierTestRun()
         self.curveTheButton()
     }
     
@@ -103,10 +103,11 @@ class EmoViewController: UIViewController {
                     valenceScore += 1
                 case "Neg":
                     valenceScore -= 1
+                default:
+                    break  // MARK: - (re-inspect the switch cases)
                 }
-                //    print(emoValence)
             }
-            // print(valenceScore)
+            print(valenceScore)
             
             self.uiRefresher(with: valenceScore)
             
@@ -135,9 +136,6 @@ class EmoViewController: UIViewController {
     private func emoTiClassfierTestRun() {
         let predictionText = try? emoTiClassiferObject.prediction(text: "@Netflix is pretty darn amazing!")
         print(predictionText?.label )
-        
     }
 }
 // perhaps manually append exclamation mark to the end to make it more accurate
-               
-  
