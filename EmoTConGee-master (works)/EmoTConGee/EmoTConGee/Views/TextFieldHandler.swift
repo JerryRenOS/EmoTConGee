@@ -11,7 +11,7 @@ import UIKit
 extension EmoViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("didbegin")
-        emoTextfield.tintColor = .cyan
+        emoTextfield.tintColor = .lightGray
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
