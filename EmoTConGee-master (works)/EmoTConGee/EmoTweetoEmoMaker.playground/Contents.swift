@@ -17,7 +17,7 @@ let superMetaData = MLModelMetadata(author: "Jerry Ren", shortDescription: "Inte
 
 // MARK: - Try 'em out below
 
-try emoClassfier.prediction(from: "Netflix is better than Hulu~")
+try emoClassfier.prediction(from: "Netflix is better than Hulu")
 try emoClassfier.prediction(from: "Sunsets are mesmerizing.")
 
 
