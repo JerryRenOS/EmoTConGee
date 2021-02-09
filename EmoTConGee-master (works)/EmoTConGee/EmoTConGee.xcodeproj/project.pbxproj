@@ -162,13 +162,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8F439738258858BE006EC1FE /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		8F491B2024ABB84600C0B793 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,7 +238,6 @@
 				8F6D3B75249C0C1400772DCA /* EmoTConGeeTweetoClassifier.mlmodel */,
 				8F9C99D0249AEB1800E862A7 /* Main.storyboard */,
 				8F9C99D3249AEB1C00E862A7 /* Assets.xcassets */,
-				8F439738258858BE006EC1FE /* ViewModels */,
 				8F9C99D5249AEB1C00E862A7 /* LaunchScreen.storyboard */,
 				8F9C99D8249AEB1C00E862A7 /* Info.plist */,
 			);

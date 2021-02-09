@@ -98,6 +98,17 @@ class EmoViewController: UIViewController {
                 default:
                    ()
                 }
+                       
+//                switch emoValence {
+//                case "Neutral":
+//                    valenceScore += 0
+//                case "Pos":
+//                    valenceScore += 1
+//                case "Neg":
+//                    valenceScore -= 1
+//                default:
+//                    break  // MARK: - (re-inspect the switch cases)
+//                }
             }
             print(valenceScore)
             
