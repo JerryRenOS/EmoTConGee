@@ -25,11 +25,9 @@ class EmoViewController: UIViewController {
     
     @IBOutlet weak var emoTextfield: UITextField!
     @IBOutlet weak var emoLabel: UILabel!
-    
     @IBOutlet weak var guessingButton: UIButton!
     
     @IBAction func guessingGame(_ sender: UIButton) {
-        
         guard let searchEntryText = emoTextfield.text else { return }
         
         if searchEntryText.emptinessOrWhiteness() {
@@ -44,10 +42,9 @@ class EmoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         emoTextfield.delegate = self
         
- //       emoTiClassfierTestRun()
+ //    emoTiClassfierTestRun()
         self.curveTheButton()
     }
     
@@ -66,9 +63,7 @@ class EmoViewController: UIViewController {
                 guard let tweetText = results[ind][GloballyUsed.fullText].string else { return }
                 
                 let tweetTextInputForClassification = EmoTConGeeTweetoClassifierInput(text: tweetText)
-                
                 tweetsCollectionForAnalysis.append(tweetTextInputForClassification)
-                
                 tweetsCollectionPlain.append(tweetText)
             }
             
@@ -125,7 +120,7 @@ class EmoViewController: UIViewController {
     }
     
     private func uiRefresher(with viScore: Int) {
-        
+
         if viScore < -12 {
             self.emoLabel.text = "🤕"
         } else if viScore < -4 {
@@ -142,7 +137,7 @@ class EmoViewController: UIViewController {
     let emoTiClassiferObject = EmoTConGeeTweetoClassifier()
     
     private func emoTiClassfierTestRun() {
-        let predictionText = try? emoTiClassiferObject.prediction(text: "@Netflix is pretty darn amazing!")
+        let predictionText = try? emoTiClassiferObject.prediction(text: "Frozen Yogurt is pretty darn amazing!")
         print(predictionText?.label )
     }
 }
